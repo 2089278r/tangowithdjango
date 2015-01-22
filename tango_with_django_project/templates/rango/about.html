@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+<html>
+
+    <head>
+        <title>Rasmus</title>
+    </head>
+
+    <body>
+        <h1>Rasmus says...</h1>
+        hello world! <strong>{{ boldmessage }}</strong><br />
+        <img src="{% static "images/rasmus.jpg" %}" alt="There should be a picture of Rasmus here..." /> <!-- New line -->
+    </body>
+
+</html>
