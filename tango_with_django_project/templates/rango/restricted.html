@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ Restricted_Page}}{% endblock %}
+
+{% block body_block %}
+    <h1>Restricted Page</h1>
+
+    You get to see the restricted page...
+
+    <br> <strong>Lucky You!</strong><br />
+
+
+
+    <a href="/rango/">Return to the homepage.</a><br />
+
+{% endblock %}
