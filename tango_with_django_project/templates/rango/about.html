@@ -2,12 +2,15 @@
 
 {% load staticfiles %}
 
-{% block title %}{{ Rasmus }}{% endblock %}
+{% block title %}About{% endblock %}
 
 {% block body_block %}
-   <h1>Rasmus says...</h1>
-        hello world! <strong>{{ boldmessage }}</strong><br />
-        <img src="{% static "images/rasmus.jpg" %}" alt="There should be a picture of Rasmus here..." />
-        <p> You have visited our site: {{ visits }} times so far!</p>
+    <div class="page-header">
+                <h1>About</h1>
+            </div>
+            <div>
+            <p></strong>Rasmus says hello! He built this Rango tutorial!</p>
 
+            <img  width="90" height="100" src="{% static "images/rasmus.jpg" %}" alt="There should be a picture of Rasmus here..." />
+            </div>
 {% endblock %}
