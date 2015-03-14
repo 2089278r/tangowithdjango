@@ -120,8 +120,9 @@ def add_page(request, category_name_slug):
                 page.category = cat
                 page.views = 0
                 page.save()
-                # probably better to use a redirect here.
-                return category(request, category_name_slug)
+                redirectReturn = '/rango/category/'
+                redirectReturn += category_name_slug
+                return HttpResponseRedirect(redirectReturn)
         else:
             print form.errors
     else:
@@ -242,6 +243,10 @@ def restricted(request):
     context_dict = {}
     return render(request, 'rango/restricted.html', context_dict)
 
+def password_reset(request):
+    context_dict = {}
+    return render(request, 'registration/password_reset_form.html', context_dict)
+
 def search(request):
 
     result_list = []
@@ -270,3 +275,4 @@ def track_url(request):
                 pass
 
     return redirect(url)
+
